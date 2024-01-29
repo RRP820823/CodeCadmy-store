@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { calculatePrice, getCurrencySymbol } from "../../../utilities/utilities"
 import { addItem } from "../cart/cartSlice.js"
 import { loadData } from "./inventorySlice"
-
+//added image component 
 export const Inventory = ({ inventory, currencyFilter, dispatch }) => {
   const onMount = () => {
     dispatch(loadData())
