@@ -1,8 +1,10 @@
 import React, { useEffect } from "react"
-
+import Image from 'next/image'
 import { calculatePrice, getCurrencySymbol } from "../../../utilities/utilities"
 import { addItem } from "../cart/cartSlice.js"
 import { loadData } from "./inventorySlice"
+//added image  
+
 
 export const Inventory = ({ inventory, currencyFilter, dispatch }) => {
   const onMount = () => {
@@ -25,7 +27,7 @@ export const Inventory = ({ inventory, currencyFilter, dispatch }) => {
     const displayPrice = calculatePrice(price, currencyFilter)
     return (
       <li key={name} className="item">
-        <img src={img} alt={""} />
+        <Image src={img} alt={""} />
         <h3>{name}</h3>
         <h3 className="price">
           {getCurrencySymbol(currencyFilter)}
