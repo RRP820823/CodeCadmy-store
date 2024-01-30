@@ -27,7 +27,7 @@ export const Inventory = ({ inventory, currencyFilter, dispatch }) => {
     const displayPrice = calculatePrice(price, currencyFilter)
     return (
       <li key={name} className="item">
-        <Image src={img} alt={""} />
+        <Image src={img} alt={""}  width={100} height = {100}/>
         <h3>{name}</h3>
         <h3 className="price">
           {getCurrencySymbol(currencyFilter)}
